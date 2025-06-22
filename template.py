@@ -19,12 +19,13 @@ PROJECT_STRUCTURE = [
     f"src/{PROJECT_NAME}/constants/__init__.py",
 
     "config/config.yaml",
+    "research/trials.ipynb",
+    "templates/index.html",
+    
     "dvc.yaml",
     "params.yaml",
     "requirements.txt",
     "setup.py",
-    "research/trials.ipynb",
-    "templates/index.html",
 ]
 
 for filepath in PROJECT_STRUCTURE:

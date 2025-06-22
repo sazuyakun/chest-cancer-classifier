@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-PROJECT_NAME = "chest-cancer-classifier"
+PROJECT_NAME = "chestCancerClassifier"
 
 PROJECT_STRUCTURE = [
     ".github/workflows/.gitkeep",
@@ -12,6 +12,7 @@ PROJECT_STRUCTURE = [
     f"src/{PROJECT_NAME}/__init__.py",
     f"src/{PROJECT_NAME}/components/__init__.py",
     f"src/{PROJECT_NAME}/utils/__init__.py",
+    f"src/{PROJECT_NAME}/utils/common.py",
     f"src/{PROJECT_NAME}/config/__init__.py",
     f"src/{PROJECT_NAME}/config/configuration.py",
     f"src/{PROJECT_NAME}/pipeline/__init__.py",
@@ -21,7 +22,7 @@ PROJECT_STRUCTURE = [
     "config/config.yaml",
     "research/trials.ipynb",
     "templates/index.html",
-    
+
     "dvc.yaml",
     "params.yaml",
     "requirements.txt",

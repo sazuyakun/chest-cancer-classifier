@@ -11,9 +11,8 @@ A machine learning project for chest cancer classification using MLOps practices
 - Automated CI/CD with GitHub Actions
 
 ## Training Methodology
-```
-Transfer Learning on VGG-16
-```
+
+> Transfer Learning on VGG-16
 
 ## Installation
 

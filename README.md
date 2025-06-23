@@ -52,3 +52,5 @@ chest-cancer-classifier/
 ## Pipeline
 
 1. Data Ingestion
+2. Prepare Base Model
+3. Training

@@ -1,6 +1,7 @@
 import os
 import zipfile
 import gdown
+from pathlib import Path
 from chestCancerClassifier import logger
 from chestCancerClassifier.utils.common import get_size
 from chestCancerClassifier.entity.config_entity import DataIngestionConfig
@@ -18,6 +19,15 @@ class DataIngestion:
             dataset_url = self.config.source_URL
             zip_download_dir = self.config.local_data_file
             os.makedirs("artifacts/data_ingestion", exist_ok=True)
+
+             # Check if file already exists and has valid size
+            if os.path.exists(zip_download_dir):
+                file_size = get_size(Path(zip_download_dir))
+                logger.info(f"File {zip_download_dir} already exists with size: {file_size}")
+                if os.path.getsize(zip_download_dir) > 0:  # Check if file is not empty
+                    logger.info(f"File {zip_download_dir} already downloaded. Skipping download.")
+                    return str(zip_download_dir)
+
             logger.info(f"Downloading data from {dataset_url} into file {zip_download_dir}")
 
             file_id = dataset_url.split("/")[-2]

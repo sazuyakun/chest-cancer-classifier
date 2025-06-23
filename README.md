@@ -10,6 +10,11 @@ A machine learning project for chest cancer classification using MLOps practices
 - Flask web application for inference
 - Automated CI/CD with GitHub Actions
 
+## Training Methodology
+```
+Transfer Learning on VGG-16
+```
+
 ## Installation
 
 ```bash
@@ -43,3 +48,7 @@ chest-cancer-classifier/
 7. Update the pipeline
 8. Update the main.py
 9. Update the dvc.yaml
+
+## Pipeline
+
+1. Data Ingestion

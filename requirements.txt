@@ -1,6 +1,8 @@
 -e .
 Flask==3.1.1
 PyYAML==6.0.2
+dagshub-annotation-converter==0.1.10
+dagshub==0.5.10
 dvc-data==3.16.10
 dvc-http==2.32.0
 dvc-objects==5.1.1

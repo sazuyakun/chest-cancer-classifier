@@ -10,6 +10,9 @@ A machine learning project for chest cancer classification using MLOps practices
 - Flask web application for inference
 - Automated CI/CD with GitHub Actions
 
+## Will add...
+- Functionality for the logging the pytorch model in mlflow tracking
+
 ## Training Methodology
 
 > Transfer Learning on VGG-16
@@ -18,6 +21,16 @@ A machine learning project for chest cancer classification using MLOps practices
 
 ```bash
 pip install -r requirements.txt
+```
+
+## DVC Usage
+1. Initialise dvc
+```bash
+dvc init
+```
+2. Regenerate data pipeline results by restoring the dependency graph defined among the stages in dvc.yaml
+```bash
+dvc repro
 ```
 
 ## Usage

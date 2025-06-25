@@ -3,6 +3,9 @@
 
 A machine learning project for chest cancer classification using MLOps practices.
 
+## Final App Preview
+https://github.com/user-attachments/assets/685f0596-f05e-481d-9ce1-59bcf9a31ef7
+
 ## Features
 
 - Deep learning model for chest cancer classification

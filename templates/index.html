@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest Cancer Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🔬</div>
+                <h1>Chest Cancer Classifier</h1>
+            </div>
+            <p class="subtitle">AI-powered medical imaging analysis</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-placeholder" id="uploadPlaceholder">
+                            <div class="upload-icon">📁</div>
+                            <h3>Upload Medical Image</h3>
+                            <p>Drag and drop or click to select a chest X-ray image</p>
+                            <button class="upload-btn" id="uploadBtn">Select Image</button>
+                        </div>
+                        <div class="image-preview" id="imagePreview">
+                            <img id="previewImg" alt="Preview">
+                            <div class="image-overlay">
+                                <button class="change-btn" id="changeBtn">Change Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="predict-btn" id="predictBtn" disabled>
+                        <span class="btn-text">Analyze Image</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection">
+                <div class="results-card">
+                    <h2>Analysis Results</h2>
+                    <div class="results-content" id="resultsContent">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Chest Cancer Classifier. Powered by AI.</p>
+        </footer>
+    </div>
+
+    <!-- Hidden file input -->
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Analyzing image...</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
